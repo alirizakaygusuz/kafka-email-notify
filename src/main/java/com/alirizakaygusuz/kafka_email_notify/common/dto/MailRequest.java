@@ -1,14 +1,12 @@
-package com.alirizakaygusuz.kafka_email_notify.producer.dto;
+package com.alirizakaygusuz.kafka_email_notify.common.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class MailRequest {
 
 	private String to;
