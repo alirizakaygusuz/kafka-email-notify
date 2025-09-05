@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import com.alirizakaygusuz.kafka_email_notify.common.dto.MailRequest;
+import com.alirizakaygusuz.kafka_email_notify.dto.MailRequest;
 import com.alirizakaygusuz.kafka_email_notify.producer.service.MailProducerService;
 
 import lombok.RequiredArgsConstructor;

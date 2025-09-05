@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.alirizakaygusuz.kafka_email_notify.common.dto.MailRequest;
+import com.alirizakaygusuz.kafka_email_notify.dto.MailRequest;
 import com.alirizakaygusuz.kafka_email_notify.producer.service.MailProducerService;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -19,7 +20,7 @@ public class MailController {
 	private final MailProducerService mailProducerService;
 	
 	@PostMapping
-	public ResponseEntity<String> sendNotication(@RequestBody MailRequest mailRequest){
+	public ResponseEntity<String> sendNotication(@Valid @RequestBody MailRequest mailRequest){
 		
 		mailProducerService.sendMessage(mailRequest);
 		

@@ -1,5 +1,7 @@
-package com.alirizakaygusuz.kafka_email_notify.common.dto;
+package com.alirizakaygusuz.kafka_email_notify.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,8 +11,11 @@ import lombok.NoArgsConstructor;
 @Data
 public class MailRequest {
 
+	@NotBlank
+	@Email
 	private String to;
-	private String subjectString;
+	
+	private String subject;
 	private String body;
 	
 }
